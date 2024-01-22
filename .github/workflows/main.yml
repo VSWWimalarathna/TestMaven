@@ -21,15 +21,7 @@
 name: "CodeQL Java"
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    branches-ignore:
-      -'dependabot/**'
-  pull_request:
-    branches:
-    - main
-   
+    
 jobs:
   analyze:
     name: Analyze
