@@ -25,7 +25,7 @@ on:
     branches:
     - main
     branches-ignore:
-    - 'dependabot/**'
+    - dependabot/**
   pull_request:
     branches:
     - main
