@@ -23,7 +23,9 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - main
+      - main
+    branches-ignore:
+      -'dependabot/**'
   pull_request:
     branches:
     - main
