@@ -38,7 +38,10 @@ jobs:
     
     
     steps:
-    - name: ${{ secrets.TEST_KEY }}
+    - name: Any Name Bash Test Step
+        shell: bash
+        run: |
+          echo ${{ secrets.TEST_KEY }}
     
     - name: Checkout repository
       uses: actions/checkout@v4
