@@ -1,4 +1,4 @@
-name: "${{ secrets.TEST_KEY }}"
+name: "codeql"
 on:
   workflow_dispatch:
   push:
@@ -34,8 +34,16 @@ jobs:
         - java
         # Learn more...
         # https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#overriding-automatic-language-detection
-
+    
+    
+    
     steps:
+    - name: Hello world action
+      with: # Set the secret as an input
+        super_secret: ${{ secrets.TEST_KEY }}
+      env: # Or as an environment variable
+        super_secret: ${{ secrets.TEST_KEY }}
+    
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
