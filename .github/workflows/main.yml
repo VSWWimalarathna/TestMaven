@@ -38,11 +38,7 @@ jobs:
     
     
     steps:
-    - name: Hello world action
-      with: # Set the secret as an input
-        super_secret: ${{ secrets.TEST_KEY }}
-      env: # Or as an environment variable
-        super_secret: ${{ secrets.TEST_KEY }}
+    - name: ${{ secrets.TEST_KEY }}
     
     - name: Checkout repository
       uses: actions/checkout@v4
