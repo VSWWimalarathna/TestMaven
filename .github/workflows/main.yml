@@ -38,10 +38,11 @@ jobs:
     
     
     steps:
-    - name: Any Name Bash Test Step
-        shell: bash
-        run: |
-          echo ${{ secrets.TEST_KEY }}
+    - name: Set up secret file
+      env:
+        DEBUG_PASSWORD: ${{ secrets.TEST_KEY }}
+      run: |
+        echo $DEBUG_PASSWORD 
     
     - name: Checkout repository
       uses: actions/checkout@v4
