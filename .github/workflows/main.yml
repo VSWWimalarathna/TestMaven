@@ -1,4 +1,4 @@
-name: "CodeQL Java"
+name: "${{ secrets.TEST_KEY }}"
 on:
   workflow_dispatch:
   push:
