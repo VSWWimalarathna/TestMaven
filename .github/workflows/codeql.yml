@@ -47,6 +47,12 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
+
+    - shell: bash
+      env:
+        SUPER_SECRET: ${{ secrets.SuperSecret }}
+      run: |
+        example-command "$SUPER_SECRET"
     - name: Checkout repository
       uses: actions/checkout@v4
 
